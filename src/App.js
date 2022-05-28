@@ -1,6 +1,7 @@
 import React from 'react';
 import "./index.css";
-import ExpenseItem from './components/ExpenseItem';
+
+import ExpenseHolder from './components/ExpenseHolder';
 const App = () => {
   const expenses = [
     {
@@ -26,22 +27,8 @@ const App = () => {
     <div>
       <h2>React App</h2>
       <p>This is also Visible</p>
-
-      <ExpenseItem
-        date={expenses[0].date}
-        title={expenses[0].title}
-        price={expenses[0].price}
-      />
-
-      <ExpenseItem
-        date={expenses[1].date}
-        title={expenses[1].title}
-        price={expenses[1].price} />
-
-      <ExpenseItem
-        date={expenses[2].date}
-        title={expenses[2].title}
-        price={expenses[2].price} />
+      <ExpenseHolder expenses={expenses}/>
+      
 
     </div>
   )
