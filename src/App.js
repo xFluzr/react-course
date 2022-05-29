@@ -1,7 +1,8 @@
 import React from 'react';
 import "./index.css";
 
-import ExpenseHolder from './components/ExpenseHolder';
+import ExpenseHolder from './components/Expenses/ExpenseHolder';
+import NewExpense from './components/NewExpense/NewExpense';
 const App = () => {
   const expenses = [
     {
@@ -25,11 +26,8 @@ const App = () => {
   ];
   return (
     <div>
-      <h2>React App</h2>
-      <p>This is also Visible</p>
+      <NewExpense/>
       <ExpenseHolder expenses={expenses}/>
-      
-
     </div>
   )
 }

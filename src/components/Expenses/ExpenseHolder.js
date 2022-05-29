@@ -1,9 +1,11 @@
-import React from 'react'
-import ExpenseItem from './ExpenseItem'
+import React from 'react';
+import ExpenseItem from './ExpenseItem';
+import Card from '../UI/Card';
+import './ExpenseHolder.css';
 const ExpenseHolder = ({expenses}) => {
 
   return (
-    <div>
+    <Card className='expenses'>
         <ExpenseItem
         date={expenses[0].date}
         title={expenses[0].title}
@@ -19,7 +21,7 @@ const ExpenseHolder = ({expenses}) => {
         date={expenses[2].date}
         title={expenses[2].title}
         price={expenses[2].price} />
-    </div>
+    </Card>
   )
 }
 
