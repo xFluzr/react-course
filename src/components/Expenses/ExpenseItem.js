@@ -6,7 +6,6 @@ import Card from "../UI/Card";
 const ExpenseItem = ({ title, price, date }) => {
 
     const [propsTitle, setPropsTitle] = useState(title);
-    const [selectedYear,setSelectedYear] =useState("");
     const clickHandler = () => {
         setPropsTitle("Updated");
     }
