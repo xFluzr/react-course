@@ -24,9 +24,14 @@ const App = () => {
       price: 492
     }
   ];
+
+  const addExpenseHandler =expense=>{
+    console.log(expense)
+  }
+
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <ExpenseHolder expenses={expenses}/>
     </div>
   )
