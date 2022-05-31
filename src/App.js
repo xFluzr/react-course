@@ -28,12 +28,11 @@ const App = () => {
   const [expenses, setExpenses] = useState(data)
 
   const addExpenseHandler = expense => {
-    console.log(expense)
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses]
     });
   };
-
+  
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />

@@ -2,8 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1rem;
     text-align: left;
+    
 }
 
 .new-expense__control label {

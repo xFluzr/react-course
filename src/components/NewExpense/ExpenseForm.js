@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ExpenseForm.css';
 
-const ExpenseForm = ({onSaveExpenseData}) => {
+const ExpenseForm = ({onSaveExpenseData,showForm,setShowForm}) => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
@@ -29,7 +29,10 @@ const ExpenseForm = ({onSaveExpenseData}) => {
         e.preventDefault();
     }
 
-
+    const changingViewToButton=()=>{
+        console.log(showForm)
+        setShowForm(!showForm)
+    }
     return (
         <form onSubmit={submitHandler}>
             <div className='new-expense__controls'>
@@ -64,6 +67,7 @@ const ExpenseForm = ({onSaveExpenseData}) => {
 
             </div>
             <div className='new-expense__actions'>
+                <button type="submit" onClick={changingViewToButton}>Cancel</button>
                 <button type="submit" >Add Expense</button>
             </div>
         </form>
