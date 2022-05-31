@@ -3,7 +3,7 @@ import ExpenseDate from './ExpenseDate';
 import "./ExpenseItem.css"
 import Card from "../UI/Card";
 
-const ExpenseItem = ({ title, price, date }) => {
+const ExpenseItem = ({ title, date,amount }) => {
 
 
     return (
@@ -16,7 +16,7 @@ const ExpenseItem = ({ title, price, date }) => {
             </div>
 
             <div className='expense-item__price'>
-                ${price}
+                ${amount}
             </div>
             
         </Card>
